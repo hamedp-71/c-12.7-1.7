@@ -57,8 +57,8 @@ proxies:
     ip: 172.16.0.3
     ipv6: 2001:db8:1::1
     private-key: "pQ15jrTUSHWaZUZrR7VKob9PjbrStxUQJ/akkKkplsU="
-    server: 188.114.98.74
-    port: 988
+    server: 188.114.97.136
+    port: 1010
     public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
     allowed-ips: ["0.0.0.0/0", "::/0"]
     reserved: [209,98,59]
@@ -81,8 +81,8 @@ proxies:
     ip: 172.16.0.3
     ipv6: 2001:db8:1::1
     private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
-    server: 188.114.96.151
-    port: 943
+    server: 188.114.98.105
+    port: 1010
     public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
     allowed-ips: ["0.0.0.0/0", "::/0"]
     reserved: "AAAA"
@@ -251,75 +251,6 @@ proxies:
       h4: 3
       h3: 4
 
-  - name: "🇮🇷 hamedp71-8"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "oJyILsu+ynZaiauCWCi/CEQF6Ndu8L92XDGq9v4fo3g="
-    server: 188.114.97.84
-    port: 880
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [155, 155, 218]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷 hamedp71-9"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "gM74WrM/HEP1pdpF3O+PA/GMp7estvHh9dGhmqopHGM="
-    server: 188.114.98.0
-    port: 878
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [223, 248, 35]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷 hamedp71-10"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "UO6nSevQRKVntgPp1ro+CpWHrTo4viBG+0ARinBus0E="
-    server: 188.114.98.32
-    port: 955
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [125, 208, 143]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
   - name: "🇮🇷ipv6 hamedp71-11"
     type: wireguard
     ip: 172.16.0.2/32
@@ -406,12 +337,9 @@ proxy-groups:
       - "🇮🇷 hamedp71-5"
       - "🇮🇷 hamedp71-6"
       - "🇮🇷 hamedp71-7"
-      - "🇮🇷 hamedp71-8"
-      - "🇮🇷 hamedp71-9"
-      - "🇮🇷 hamedp71-10"
-      - "🇮🇷ipv6 hamedp71-11"
-      - "🇮🇷ipv6 hamedp71-12"
-      - "🇮🇷ipv6 hamedp71-13"
+      - "🇮🇷ipv6 hamedp71-8"
+      - "🇮🇷ipv6 hamedp71-9"
+      - "🇮🇷ipv6 hamedp71-10"
 
   - name: "🚀 انتخاب خودکار (بهترین)"
     type: url-test
@@ -428,12 +356,9 @@ proxy-groups:
       - "🇮🇷 hamedp71-5"
       - "🇮🇷 hamedp71-6"
       - "🇮🇷 hamedp71-7"
-      - "🇮🇷 hamedp71-8"
-      - "🇮🇷 hamedp71-9"
-      - "🇮🇷 hamedp71-10"
-      - "🇮🇷ipv6 hamedp71-11"
-      - "🇮🇷ipv6 hamedp71-12"
-      - "🇮🇷ipv6 hamedp71-13"
+      - "🇮🇷ipv6 hamedp71-8"
+      - "🇮🇷ipv6 hamedp71-9"
+      - "🇮🇷ipv6 hamedp71-10"
 
 rule-providers:
   ir:

@@ -31,20 +31,47 @@ dns:
     - '2001:4860:4860::8888'
     - '8.8.4.4'
     - '2001:4860:4860::8844'
+    - '8.26.56.10'
+    - '2001:1608:10:25::1c04:b12f'
+    - '208.67.222.222'
+    - '2620:119:35::35'
+    - '9.9.9.9'
+    - '2620:fe::fe'
+    - '77.88.8.8'
+    - '2a02:6b8::feed:0ff'
+    - '185.55.226.26'
+    - '2a00:1098:0:80::2'
+    - '2a00:1098:2c::1'
+    - '10.202.10.202'
+    - '10.202.10.102'
   proxy-server-nameserver:
     - '8.8.8.8'
     - '2001:4860:4860::8888'
     - '8.8.4.4'
     - '2001:4860:4860::8844'
+    - '8.26.56.10'
+    - '2001:1608:10:25::1c04:b12f'
+    - '208.67.222.222'
+    - '2620:119:35::35'
+    - '9.9.9.9'
+    - '2620:fe::fe'
+    - '77.88.8.8'
+    - '2a02:6b8::feed:0ff'
+    - '185.55.226.26'
+    - '2a00:1098:0:80::2'
+    - '2a00:1098:2c::1'
+    - '10.202.10.202'
+    - '10.202.10.102'
 tun:
   enable: true
   stack: mixed
   auto-route: true
   strict-route: true
   auto-detect-interface: true
-  dns-hijack: 
+  dns-hijack:
     - 'any:53'
   mtu: 1280
+
 sniffer:
   enable: true
   force-dns-mapping: true
@@ -57,86 +84,16 @@ sniffer:
       ports: [443, 8443, 2053, 2083, 2087, 2096]
 
 proxies:
-
-  - name: "🇮🇷 hamedp71-1"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "QGAWKwwBJ2obTIUlIKkju2J5HIXZYJOcpOZSjEAg1nI="
-    server: 188.114.97.119
-    port: 987
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [104, 158, 39]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷 hamedp71-2"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "IE/s0zaqQpK6XVYBzZtz0SHMhumKX9dQe2xDCB0dMFc="
-    server: 188.114.96.128
-    port: 1018
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [234, 22, 171]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷 hamedp71-3"
-    type: wireguard
-    ip: 172.16.0.2/32
-    private-key: "IBZHXF1Zbm6c57O0koC6mr+JxaGW7EPoF+z/fRbKHX8="
-    server: 188.114.97.167
-    port: 1074
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [111, 20, 196]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷 Warp - IPv4"
+  - name: "🇮🇷 Warp - IPv4-1"
     type: wireguard
     ip: 172.16.0.3
     ipv6: 2001:db8:1::1
     private-key: "pQ15jrTUSHWaZUZrR7VKob9PjbrStxUQJ/akkKkplsU="
-    server: 188.114.97.126
-    port: 1010
+    server: 188.114.96.151
+    port: 943
     public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
     allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [209,98,59]
+    reserved: "AAAA"
     udp: true
     mtu: 1280
     dialer-proxy: ""
@@ -151,127 +108,156 @@ proxies:
       h4: 3
       h3: 4
 
-  - name: "🇩🇪 Warp - IPv4"
+  - name: "🇩🇪 Warp - IPv4-1"
     type: wireguard
     ip: 172.16.0.3
     ipv6: 2001:db8:1::1
     private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
-    server: 188.114.98.145
+    server: 188.114.96.55
+    port: 943
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: "🇮🇷 Warp - IPv4-1"
+
+  - name: "🇮🇷 Warp - IPv4-2"
+    type: wireguard
+    ip: 172.16.0.3
+    ipv6: 2001:db8:1::3
+    private-key: "sBlOEknlqiLiQ0cgThr8n9sZB6nCJ0oTgYMlTlLgekY="
+    server: 188.114.97.56
+    port: 500
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 150
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇩🇪 Warp - IPv4-2"
+    type: wireguard
+    ip: 172.16.0.3
+    ipv6: 2001:db8:1::3
+    private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
+    server: 188.114.97.221
+    port: 500
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: "🇮🇷 Warp - IPv4-2"
+
+  - name: "🇮🇷 Warp - IPv4-3"
+    type: wireguard
+    ip: 172.16.0.3
+    ipv6: 2001:db8:1::3
+    private-key: "wbdzf5P8GQTujsFGQBXh6ipmDRkFSRypXRPSHvVSL5E="
+    server: 188.114.99.48
+    port: 7281
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 250
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇳🇱 Amsterdam - IPv4"
+    type: ss
+    server: 198.105.123.190
+    port: 46902
+    cipher: chacha20-ietf-poly1305
+    password: "2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8"
+    dialer-proxy: "🇮🇷 Warp - IPv4-3"
+
+  - name: "🇮🇷 Warp - IPv6"
+    type: wireguard
+    ip: 172.16.0.2
+    ipv6: 2001:db8:1::3
+    private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
+    server: "[2606:4700:d0::5db:987a:2353:9dcc]"
+    port: 3854
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1280
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 250
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇸🇪 Warp - IPv6"
+    type: wireguard
+    ip: 172.16.0.2
+    ipv6: 2001:db8:1::3
+    private-key: "0GapdERcPdqP7hXovlbv/HoUafjR3jB4EGGm+LXXdlA="
+    server: 162.159.192.2
     port: 1010
     public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
     allowed-ips: ["0.0.0.0/0", "::/0"]
     reserved: "AAAA"
     udp: true
     mtu: 1280
-    dialer-proxy: "🇮🇷 Warp - IPv4"
-
-  - name: "🇮🇷ipv6 hamedp71-1"
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2001:db8:1::3
-    private-key: "QGAWKwwBJ2obTIUlIKkju2J5HIXZYJOcpOZSjEAg1nI="
-    server: "[2606:4700:d0::8be4:d75d:e714:abb1]"
-    port: 987
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [104, 158, 39]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷ipv6 hamedp71-2"
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2001:db8:1::3
-    private-key: "IE/s0zaqQpK6XVYBzZtz0SHMhumKX9dQe2xDCB0dMFc="
-    server: "[2606:4700:d1::f9fa:a95b:8ee9:868e]"
-    port: 1074
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [234, 22, 171]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
-
-  - name: "🇮🇷ipv6 hamedp71-3"
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2001:db8:1::3
-    private-key: "IBZHXF1Zbm6c57O0koC6mr+JxaGW7EPoF+z/fRbKHX8="
-    server: "[2606:4700:d0::15ed:af59:3973:eec]"
-    port: 1018
-    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: [111, 20, 196]
-    udp: true
-    mtu: 1280
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 250
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h4: 3
-      h3: 4
+    dialer-proxy: "🇮🇷 Warp - IPv6"
 
 proxy-groups:
-  - name: "✅ انتخاب دستی"
+  - name: "🌐 گلوبال"
     type: select
     proxies:
       - "🚀 انتخاب خودکار (بهترین)"
-      - "🌍 Global"
-      - "🇮🇷 hamedp71-1"
-      - "🇮🇷 hamedp71-2"
-      - "🇮🇷 hamedp71-3"
-      - "🇮🇷 Warp - IPv4"
-      - "🇩🇪 Warp - IPv4"
-      - "🇮🇷ipv6 hamedp71-1"
-      - "🇮🇷ipv6 hamedp71-2"
-      - "🇮🇷ipv6 hamedp71-3"
+      - "🇮🇷 Warp - IPv4-1"
+      - "🇩🇪 Warp - IPv4-1"
+      - "🇮🇷 Warp - IPv4-2"
+      - "🇩🇪 Warp - IPv4-2"
+      - "🇮🇷 Warp - IPv4-3"
+      - "🇳🇱 Amsterdam - IPv4"
+      - "🇮🇷 Warp - IPv6"
+      - "🇸🇪 Warp - IPv6"
 
   - name: "🚀 انتخاب خودکار (بهترین)"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    tolerance: 100
+    interval: 600
+    tolerance: 10
     proxies:
-      - "🇮🇷 hamedp71-1"
-      - "🇮🇷 hamedp71-2"
-      - "🇮🇷 hamedp71-3"
-      - "🇮🇷 Warp - IPv4"
-      - "🇩🇪 Warp - IPv4"
-      - "🇮🇷ipv6 hamedp71-1"
-      - "🇮🇷ipv6 hamedp71-2"
-      - "🇮🇷ipv6 hamedp71-3"
-
-  - name: "🌍 Global"
-    type: select
-    proxies:
-      - "🇩🇪 Warp - IPv4"
-      - "🇮🇷 Warp - IPv4"
+      - "🇮🇷 Warp - IPv4-1"
+      - "🇩🇪 Warp - IPv4-1"
+      - "🇮🇷 Warp - IPv4-2"
+      - "🇩🇪 Warp - IPv4-2"
+      - "🇮🇷 Warp - IPv4-3"
+      - "🇳🇱 Amsterdam - IPv4"
+      - "🇮🇷 Warp - IPv6"
+      - "🇸🇪 Warp - IPv6"
 
 rule-providers:
   ir:
@@ -324,7 +310,7 @@ rules:
   - RULE-SET,phishing,REJECT
   - RULE-SET,cryptominers,REJECT
   - RULE-SET,ads,REJECT
-  - MATCH,🚀 انتخاب خودکار (بهترین)
+  - MATCH,🌐 گلوبال
 
 ntp:
   enable: true
